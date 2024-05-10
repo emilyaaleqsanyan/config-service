@@ -19,7 +19,6 @@ ext {
     set('springCloudVersion', "2023.0.1")
 }
 
-
 dependencies {
     implementation 'org.springframework.cloud:spring-cloud-config-server'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
@@ -30,6 +29,7 @@ dependencyManagement {
         mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
     }
 }
+
 bootBuildImage {
     builder = "docker.io/paketobuildpacks/builder-jammy-base"
     imageName = "${project.name}"
